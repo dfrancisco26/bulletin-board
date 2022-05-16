@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Bulletin Board</title>
+    <title>Favorite Albums</title>
 </head>
 
 <body>
@@ -20,12 +20,15 @@
         </div>
     </header>
     <main>
-        <h1>Bulletin Board Page</h1>
-        <button id="login-page-button">Log In/Sign Up</button>
-        <button id="post-button">Create a Post</button> 
+        <h1>April 2022's Favorite Records</h1>
+        <div id="buttons-div"><button id="login-page-button" onclick="window.location.href='./login-page/index.html'">Log In/Sign Up</button>
+        <button id="post-button">Submit your fave</button> 
+        </div>
+        <div id="Posts">
+        </div>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
     </footer>
 
     <script type="module" src="./app.js"></script>
