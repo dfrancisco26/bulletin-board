@@ -21,7 +21,7 @@ export async function signupUser(email, password){
 }
 
 export async function loginUser(email, password){
-    const response = await client.auth.signIn({ email, password});
+    const response = await client.auth.signIn({ email, password });
 
     return response.user;
 }
