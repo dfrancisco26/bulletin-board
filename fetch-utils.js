@@ -20,6 +20,12 @@ export async function signupUser(email, password){
     return response.user;
 }
 
+export async function loginUser(email, password){
+    const response = await client.auth.signIn({ email, password});
+
+    return response.user;
+}
+
 export async function logRedir() {
     if (await getUser()) {
         location.replace('/');
