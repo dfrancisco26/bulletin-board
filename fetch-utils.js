@@ -11,3 +11,17 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+export async function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+export async function signupUser(email, password){
+    const response = await client.auth.signUp({ email, password });
+    return response.user;
+}
+
+export async function logRedir() {
+    if (await getUser()) {
+        location.replace('/');
+    }
+}
