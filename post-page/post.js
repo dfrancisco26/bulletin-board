@@ -1,13 +1,19 @@
 // import functions and grab DOM elements
-import { createNewPost } from "../fetch-utils.js";
+import { createNewPost } from '../fetch-utils.js';
 // let state
 const faveForm = document.getElementById('fave-form');
 
 faveForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = new FormData(faveForm);
-  const response = await createNewPost(data.get('Album'), data.get('Artist'), data.get('Username'))
-})
+    e.preventDefault();
+    const data = new FormData(faveForm);
+    const newPost = {
+        Album: data.get('Album'),
+        Artist: data.get('Artist'),
+        Username: data.get('Username'),
+    };
+    const resp = await createNewPost(newPost);
+    console.log(resp);
+});
 
 
 // set event listeners 

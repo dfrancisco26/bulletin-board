@@ -39,8 +39,8 @@ export async function getPosts() {
     return response.data;
 }
 
-export async function createNewPost(post) {
-    const response = await client.from('Fav Albums').insert(post);
+export async function createNewPost(newPost) {
+    const response = await client.from('Fav Albums').insert(newPost);
     if (response.data) {
         return response.data;
     } else {
