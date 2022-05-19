@@ -26,8 +26,24 @@ export async function loginUser(email, password){
     return response.user;
 }
 
+
 export async function logRedir() {
     if (await getUser()) {
         location.replace('/');
+    }
+}
+
+export async function getPosts() {
+    const response = await client.from('Fav Albums').select('*');
+
+    return response.data;
+}
+
+export async function createNewPost(post) {
+    const response = await client.from('Fav Albums').insert(post);
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
     }
 }
