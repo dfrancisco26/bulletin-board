@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { signupUser, loginUser, logRedir } from '../fetch-utils.js';
+import { signupUser, loginUser, logRedir, checkAuth } from '../fetch-utils.js';
 // let state
 const signUpForm = document.getElementById('sign-up-form');
 const loginForm = document.getElementById('login-form');
@@ -24,5 +24,6 @@ loginForm.addEventListener('submit', async (e) => {
 });
   // get user input
   // use user input to update state 
-  // update DOM to reflect the new state
+  // update DOM to reflect the new state\
+
 logRedir();
