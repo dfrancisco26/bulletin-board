@@ -34,13 +34,13 @@ export async function logRedir() {
 }
 
 export async function getPosts() {
-    const response = await client.from('Fav Albums').select('*');
+    const response = await client.from('albums').select('*');
 
     return response.data;
 }
 
-export async function createNewPost(newPost) {
-    const response = await client.from('Fav Albums').insert(newPost);
+export async function createNewPost(Album, Artist, Username) {
+    const response = await client.from('albums').insert({ Album, Artist, Username });
     if (response.data) {
         return response.data;
     } else {

@@ -5,14 +5,13 @@ const faveForm = document.getElementById('fave-form');
 
 faveForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(faveForm);
-    const newPost = {
-        Album: data.get('Album'),
-        Artist: data.get('Artist'),
-        Username: data.get('Username'),
-    };
-    const resp = await createNewPost(newPost);
-    console.log(resp);
+    const albumData = new FormData(faveForm);
+    const data = await createNewPost(
+        albumData.get('album'),
+        albumData.get('artist'),
+        albumData.get('username')
+    );
+    console.log(data);
 });
 
 

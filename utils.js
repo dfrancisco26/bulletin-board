@@ -13,10 +13,11 @@ import { getPosts } from "./fetch-utils.js";
 pulls the name of the creator, creates p w/ user, album, artist
 and appends p to div*/
 
-/*export async function renderPosts(post) {
-  const div = document.createElement('div');
-  div.classList.add('post');
-  const p = document.createElement('p');
+export function renderPosts(post) {
+    const div = document.createElement('div');
+    div.classList.add('post');
+    div.textContent = `${post.Album} by ${post.Artist}. Posted by ${post.Username}.`;
+    return div;
 }
 
 // function that loops through data on load and calls render
