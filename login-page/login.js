@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { signupUser, loginUser, logRedir, checkAuth } from '../fetch-utils.js';
+import { signupUser, loginUser, logRedir } from '../fetch-utils.js';
 // let state
 const signUpForm = document.getElementById('sign-up-form');
 const loginForm = document.getElementById('login-form');
@@ -8,7 +8,7 @@ signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(signUpForm);
     const user = await signupUser(data.get('email'), data.get('password'));
-    console.log(data);
+    // console.log(data);
     if (user) {
         logRedir();
     }

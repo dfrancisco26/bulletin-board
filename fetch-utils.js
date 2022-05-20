@@ -30,7 +30,7 @@ export function checkAuth() {
     const user = getUser();
 
     if (!user) {
-        alert('You must be signed in to submit!')
+        alert('You must be signed in to submit a favorite!');
         location.replace('../');
 }
 }
