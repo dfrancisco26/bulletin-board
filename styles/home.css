@@ -19,25 +19,22 @@ body {
     --white: #f4f4f8ff;
 
 
-    background-image: url(../assets/vinyl.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../assets/record-bg.jpg);
+    background-size: cover; 
 
-    
 }
 h1 {
-    position: absolute;
-    font-family: 'Hachi Maru Pop', cursive;
-    background-color: var(--pblue);
-    border-radius: 5px;
-    padding: 30px;
 
+    font-family: 'Hachi Maru Pop', cursive;
+    background-color: var(--offw);
+    max-width: fit-content;
+    border-radius: 2px;
+    padding: 25px;
 }
 
 .buttons-div {
     display: flex;
-    flex-direction: column;
-    justify-content: right;
+    justify-content: flex-end;
     margin: 4px 16px 12px 0px;
 }
 
@@ -70,4 +67,11 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+.post {
+    margin: 10px 5px 10px 5px;
+    background-color: var(--that);
+    font-family: 'Cormorant', serif;
+    max-width: 25%;
 }

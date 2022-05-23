@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <!-- fonts are here--> <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&family=Hachi+Maru+Pop&family=Rock+Salt&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/post.css">
     <title>Create Post</title>
 </head>
 <body>
+    <h1>Post your favorite album!</h1>
     <form id="fave-form">
-        <h1>Post your favorite album!</h1>
-        <label>Album</label><input type="text" name = "album" id="artist">
-        <label>Artist</label><input type="text" name = "artist" id="album">
-        <label>Username</label><input type="text" name = "username" id="username">
+        <div id='album-div'><label>Album</label><input type="text" name = "album" id="artist"></div>
+        <div id='artist-div'><label>Artist</label><input type="text" name = "artist" id="artist"></div>
+        <div id='username-div'><label>Username</label><input type="text" name = "username" id="username"></div>
         <button id="post-fav">Submit</button>
     </form>
     <script type="module" src="./post.js"></script>

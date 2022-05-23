@@ -1,5 +1,3 @@
-// import functions and grab DOM elements
-import { getPosts } from "./fetch-utils.js";
 // let state
 
 // set event listeners 
@@ -9,9 +7,10 @@ import { getPosts } from "./fetch-utils.js";
   // update DOM to reflect the new state
 
 
-/*Create a render function that creates a div,
-pulls the name of the creator, creates p w/ user, album, artist
-and appends p to div*/
+/*
+Create a render function that creates a div,
+pulls the name of the creator, creates div w/ user, album, artist
+*/
 
 export function renderPosts(post) {
     const div = document.createElement('div');
@@ -19,7 +18,3 @@ export function renderPosts(post) {
     div.textContent = `${post.Album} by ${post.Artist}. Posted by ${post.Username}.`;
     return div;
 }
-
-// function that loops through data on load and calls render
-
-// create insert function that inserts form data to supabase table*/

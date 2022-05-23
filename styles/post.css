@@ -1,0 +1,41 @@
+body {
+    font-family: 'Rock Salt', cursive;
+    --that: #fe4a49ff;
+    --yella: #fed766ff;
+    --pblue: #009fb7ff;
+    --offw: #e6e6eaff;
+    --white: #f4f4f8ff;
+}
+
+
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    background-image: url('../assets/notebook-page.png');
+    background-size: cover;
+    padding-bottom: 60px;
+    justify-content: center;
+
+}
+
+#fave-form {
+    display: flex;
+    position: flex-start;
+
+}
+
+#album-div {
+    background-color: var(--that);
+    padding: 5px;
+}
+
+#artist-div {
+    background-color: var(--yella);
+    padding: 5px;
+}
+
+#username-div {
+    background-color: var(--pblue);
+    padding: 5px;
+}
