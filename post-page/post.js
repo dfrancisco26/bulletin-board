@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { createNewPost, checkAuth } from '../fetch-utils.js';
+import { createNewPost, checkAuth, logRedir } from '../fetch-utils.js';
 // let state
 const faveForm = document.getElementById('fave-form');
 
@@ -12,7 +12,7 @@ faveForm.addEventListener('submit', async (e) => {
         albumData.get('username')
     );
     if (data) {
-        location.window.href = '../index.html';
+        logRedir();
     }
     console.log(data);
 });
