@@ -14,7 +14,6 @@ faveForm.addEventListener('submit', async (e) => {
     if (data) {
         logRedir();
     }
-    console.log(data);
 });
 
 checkAuth();

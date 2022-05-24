@@ -5,6 +5,7 @@ const postsElem = document.getElementById('Posts');
 
 // let state
 
+checkAuth(); 
 
 async function displayPosts() {
     postsElem.textContent = '';

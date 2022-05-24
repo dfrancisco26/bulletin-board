@@ -51,7 +51,5 @@ export async function createNewPost(Album, Artist, Username) {
     const response = await client.from('albums').insert({ Album, Artist, Username });
     if (response.data) {
         return response.data;
-    } else {
-        console.error(response.error);
     }
 }
