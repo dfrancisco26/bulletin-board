@@ -32,7 +32,7 @@ export function checkAuth() {
     if (!user) {
         alert('You must be signed in to submit a favorite!');
         location.replace('../');
-}
+    }
 }
 export function logRedir() {
     if (getUser()) {
