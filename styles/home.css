@@ -74,4 +74,12 @@ header {
     background-color: var(--that);
     font-family: 'Cormorant', serif;
     max-width: 25%;
+    border-radius: 2px;
+    border: 4px solid black;
+    
+}
+
+.post:hover {
+    background-color: var(--yella);
+    border: 4px solid white;
 }
