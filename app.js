@@ -5,7 +5,7 @@ const postsElem = document.getElementById('Posts');
 
 // let state
 
-checkAuth(); 
+//checkAuth(); 
 
 async function displayPosts() {
     postsElem.textContent = '';
@@ -15,9 +15,7 @@ async function displayPosts() {
             const post = renderPosts(item);
             postsElem.append(post);
         }
-    } else {
-        alert('Something went wrong :(');
-    }
+    } 
 }
 
 displayPosts();
